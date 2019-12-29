@@ -151,6 +151,7 @@ function onSelect(index) {
 }
 function onCheckEntire() {
   document.querySelector('#selected_canvas_idx').textContent = 'tot';
+  selectedCanvas = -1;
 }
 var selectedCanvas;
 
