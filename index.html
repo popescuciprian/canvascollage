@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Photo Collage</title>
+    <link rel="shortcut icon" href="">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='logic.js'></script>
+    <script>
+        window.onload = function(){loadGrid(0);};
+    </script>
+</head>
+
+<body>
+    <span id="layout_menu">
+        <span class="title">Sabloane</span>
+        <menu>
+            <button onclick="loadGrid(0)">
+                <img src="media/buttons/cross.png">
+            </button>
+            <button onclick="loadGrid(1)">
+                <img src="media/buttons/cross_left.png">
+            </button>
+            <button onclick="loadGrid(2)">
+                <img src="media/buttons/prison.png">
+            </button>
+            <button onclick="loadGrid(3)">
+                <img src="media/buttons/prison_rotated.png">
+            </button>
+            <button onclick="loadGrid(4)">
+                <img src="media/buttons/experimental.png">
+            </button>
+        </menu>
+    </span>
+    <span id="photo_menu">
+        <span class="title">Photo menu (drag and drop)</span>
+        <menu ondrop="dropPhotos(event)" ondragover="allowDrop(event)"></menu>
+        <button onclick='saveCanvas(gridIndex)'>Salveaza colajul</button>
+    </span>
+    <span id="canvas_container">
+    </span>
+    <span id='effects_menu'>
+        <span class='title'>Efecte (selecteaza o imagine)</span>
+        <menu>
+            <item>
+                <label>blur</label>
+                <input type="range" min="1" max="5" value="0" class="slider" onchange='efectCanvas(this,"blur","px")'>
+            </item>
+            <hr>
+            <item>
+                <label>invert</label>
+                <input type="checkbox" value='100' min='100' onclick='efectCanvas(this,"invert","%")'>
+            </item>
+            <hr>
+            <item>
+                <label>alb-negru</label>
+                <input type="range" min="1" max="100" value="0" class="slider"
+                    onchange='efectCanvas(this,"grayscale","%")'>
+            </item>
+            <hr>
+            <item>
+                <label>hue</label>
+                <input type="range" min="1" max="100" value="0" class="slider"
+                    onchange='efectCanvas(this,"hue-rotate","deg")'>
+            </item>
+            <hr>
+            <item>
+                <label>sepia</label>
+                <input type="range" min="1" max="100" value="0" class="slider" onchange='efectCanvas(this,"sepia","%")'>
+            </item>
+            <hr>
+            <item>
+                <label id=selected_canvas>Imagine selectata:<a id=selected_canvas_idx></a></label>
+                <hr>
+                <label>Aplici pe intregul colaj?</label>
+                <input id='allCollageApply' type="checkbox" onclick='onCheckEntire()'>
+            </item>
+        </menu>
+    </span>
+</body>
+
+</html>

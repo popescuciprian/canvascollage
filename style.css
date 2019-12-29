@@ -1,0 +1,85 @@
+#layout_menu {
+  padding: 10px;
+}
+
+#layout_menu>menu {
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  text-align:center;
+}
+
+#photo_menu {
+  width: 120px;
+  padding: 10px;
+  float: left;
+}
+
+#photo_menu>menu {
+  width: 100px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  overflow-x: hidden;
+  overflow-x: auto;
+}
+
+
+#photo_menu>menu>.photo {
+  width: 80px;
+  height: 80px;
+}
+
+#effects_menu {
+  width: 135px;
+  padding: 15px;
+  float: left;
+}
+
+#effects_menu>menu {
+  width: 135px;
+  height: 500px;
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+  overflow-x: hidden;
+  overflow-x: auto;
+}
+
+canvas {
+  border: 1px solid #aaaaaa;
+  position: relative;
+  height: 99%;
+  width: 99%;
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+
+#canvas_container {
+  float: left;
+  display: grid;
+}
+
+#grid1 {
+  grid-area: a;
+}
+
+#grid2 {
+  grid-area: b;
+}
+
+#grid3 {
+  grid-area: c;
+}
+
+#grid4 {
+  grid-area: d;
+}
+
+#grid5 {
+  grid-area: e;
+}
+
+#grid6 {
+  grid-area: f;
+}
